@@ -138,13 +138,13 @@ ls: doesnotexist: No such file or directory
 12.  What was the main command that we used throughout this exercise?
 ----------
 
-
+ls
 
 ==========
 13.  Name one argument that we passed to the command.
 ----------
 
-
+$ ls -l Documents<ENTER>
 
 ==========
 14.  Type:
@@ -175,3 +175,6 @@ $ ls -a Desktop
 
 What is the command, flag, argument, and prompt?
 ----------
+
+$ is the prompt , ls is command , -a is the flag , and Desktop is the argument
+
