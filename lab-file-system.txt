@@ -16,9 +16,12 @@ Follow the instructions line-by-line.
 2. Create a directory called mtec1002.
 ----------
 
+mkdir: mtec1002: File exists
+
 ==========
 3. Change your directory so that you're in mtec1002.
 ----------
+ent-v314-008:~ student$ cd mtec1002
 
 ==========
 4. Type:
@@ -31,7 +34,8 @@ If it doesn't start at #1 again, or ask for help before moving on!
 
 Copy and paste the output of pwd below.
 ----------
-
+ent-v314-008:mtec1002 student$ pwd
+/Users/student/mtec1002
 
 
 ==========
@@ -53,6 +57,10 @@ $ ls
 
 Copy and paste the output below.
 ----------
+ent-v314-008:mtec1002 student$ mkdir food
+mkdir: food: File exists
+ent-v314-008:mtec1002 student$ ls
+foo	food
 
 
 
@@ -64,6 +72,9 @@ $ ls
 
 Copy and paste the output below.
 ----------
+ent-v314-008:mtec1002 student$ mkdir -p foo/bar/baz/qux
+ent-v314-008:mtec1002 student$ ls
+foo	food
 
 
 
@@ -75,7 +86,9 @@ $ pwd
 
 Copy and paste the output below.
 ----------
-
+ent-v314-008:mtec1002 student$ cd foo/bar/baz/qux
+ent-v314-008:qux student$ pwd
+/Users/student/mtec1002/foo/bar/baz/qux
 
 
 ==========
@@ -87,7 +100,9 @@ $ pwd
 Copy and paste the output below.
 ----------
 
-
+ent-v314-008:qux student$ cd ../..
+ent-v314-008:bar student$ pwd
+/Users/student/mtec1002/foo/bar
 
 ==========
 10. Type:
@@ -97,7 +112,10 @@ $ pwd
 
 Copy and paste the output below.
 ----------
-
+ent-v314-008:bar student$ cd -
+/Users/student/mtec1002/foo/bar/baz/qux
+ent-v314-008:qux student$ pwd
+/Users/student/mtec1002/foo/bar/baz/qux
 
  
 ==========
@@ -108,6 +126,9 @@ $ pwd
 
 Copy and paste the output below.
 ----------
+ent-v314-008:qux student$ cd ../../../..
+ent-v314-008:mtec1002 student$ pwd
+/Users/student/mtec1002
 
 
 
@@ -120,7 +141,16 @@ $ ls -l
 
 Copy and paste the first two lines from the output into the space below.
 ----------
-
+ent-v314-008:mtec1002 student$ ls -l
+total 0
+drwxr-xr-x  3 student  staff  102 Jan 28 16:57 foo
+drwxr-xr-x  2 student  staff   68 Jan 28 16:56 food
+ent-v314-008:mtec1002 student$ rmdir animals 
+rmdir: animals: No such file or directory
+ent-v314-008:mtec1002 student$ ls -l
+total 0
+drwxr-xr-x  3 student  staff  102 Jan 28 16:57 foo
+drwxr-xr-x  2 student  staff   68 Jan 28 16:56 food
 
 
 ==========
@@ -131,7 +161,9 @@ $ pwd
 
 Copy and paste the output into the space below.
 ----------
-
+ent-v314-008:mtec1002 student$ cd ~
+ent-v314-008:~ student$ pwd
+/Users/student
 
 
 ==========
@@ -142,6 +174,9 @@ $ pwd
 
 Copy and paste the output into the space below.
 ----------
+ent-v314-008:~ student$ cd /Volumes
+ent-v314-008:Volumes student$ pwd
+/Volumes
 
 
 
@@ -153,6 +188,10 @@ $ pwd
 
 Copy and paste the output into the space below.
 ----------
+ent-v314-008:Volumes student$ cd /unknown_folder
+-bash: cd: /unknown_folder: No such file or directory
+ent-v314-008:Volumes student$ pwd
+/Volumes
 
 
 
@@ -164,7 +203,9 @@ $ pwd
 
 Copy and paste the output into the space below.
 ----------
-
+ent-v314-008:Volumes student$ cd ~/mtec1002
+ent-v314-008:mtec1002 student$ pwd
+/Users/student/mtec1002
 
 
 ==========
@@ -175,12 +216,17 @@ $ hostname
 Copy and paste the output into the space below.
 ----------
 
+ent-v314-008:mtec1002 student$ hostname
+ent-v314-008.local
 
 
 ==========
 17a. Make sure you're back in your mtec1002, which should be in your home folder.  What command would you use to find out if you're in the right folder?  Write the command below, then run it.
 ----------
-
+ent-v314-008:mtec1002 student$ cd mtec1002
+-bash: cd: mtec1002: No such file or directory
+ent-v314-008:mtec1002 student$ pwd
+/Users/student/mtec1002
 
 
 ==========
@@ -203,7 +249,9 @@ lemon
 
 Use only one command to make all of these new directories.  Write what command you used below:
 ----------
-
+nt-v314-008:mtec1002 student$ cd pineapple/orange/strawberry/lemon
+ent-v314-008:lemon student$ pwd
+/Users/student/mtec1002/pineapple/orange/strawberry/lemon
 
 
 ==========
@@ -212,6 +260,9 @@ Use only one command to make all of these new directories.  Write what command y
 Write the command you used to create the directory below:
 ----------
 
+ent-v314-008:lemon student$ cd aardvark
+ent-v314-008:aardvark student$ pwd
+/Users/student/mtec1002/pineapple/orange/strawberry/lemon/aardvark
 
 
 ==========
